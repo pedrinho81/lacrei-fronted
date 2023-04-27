@@ -1,6 +1,9 @@
 import Link from "next/link"
 import crypto from 'crypto';
-import {Container} from './styles'
+import {Container, NavItem} from './styles'
+import { useRouter } from "next/router";
+import styled from "styled-components";
+import { LayoutProps } from "../layout.types";
 
 const Links = [
   {
@@ -16,13 +19,19 @@ const Links = [
     href: '/profissional'
   },
 ]
-const Header: React.FC = () => {
+
+
+
+const Header: React.FC<LayoutProps> = ({currencyHref}) => {
+
   return (
     <Container>
       <a>Lacrei</a>
-      <nav className="gap">
-        {Links.map((link) => (
-            <Link key={Number(crypto.randomUUID)} href={link.href}>{link.label}</Link>
+      <nav>
+        {Links.map((link,i ) => (
+          <NavItem key={i} changeColor active={currencyHref === link.href}>
+            <Link  href={link.href}>{link.label}</Link>
+          </NavItem>
         ))}
       </nav>
     </Container>

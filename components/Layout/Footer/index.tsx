@@ -2,23 +2,26 @@ import Link from "next/link"
 import Image from "next/image"
 import { Links } from "../Header"
 import { Container } from "./styles"
-import { Icons } from "@/public/icons"
+import { Icons } from "@/public/icons/icons"
 import crypto from 'crypto'
-const Footer: React.FC = () => {
+import { LayoutProps } from "../layout.types"
+import { NavItem } from "../Header/styles"
+const Footer: React.FC<LayoutProps> = ({ currencyHref }) => {
   return (
     <Container>
       <nav>
-        {Links.map((link) => (
-          <Link
-            key={Number(crypto.randomUUID)}
-            href={link.href}>
-            {link.label}
-          </Link>
+        {Links.map((link, i) => (
+          <NavItem key={i}  active={currencyHref === link.href}>
+            <Link
+              href={link.href}>
+              {link.label}
+            </Link>
+          </NavItem>
         ))}
       </nav>
       <div>
         {Icons.map((icon, i) => (
-          <Image 
+          <Image
             key={i}
             priority
             src={icon.src}

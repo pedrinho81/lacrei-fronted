@@ -12,7 +12,7 @@ nav {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  font-size: 0.875rem;
+  font-size: 0.875rem !important;
 }
 
 div {
@@ -25,10 +25,15 @@ p {
 }
 
 @media (min-width: 520px) {
+  margin: 0.5rem 2rem;
   nav {
     flex-direction: row;
     gap: 2.5rem;
     font-size: 1rem;
   }
+}
+
+@media (min-width: 1040px) {
+  margin: 1rem 4rem
 }
 `;

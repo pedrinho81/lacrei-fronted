@@ -38,3 +38,11 @@ export const Container = styled.header`
 
 
 `
+type NavItemProps = {
+  active: boolean
+  changeColor?: boolean
+}
+export const NavItem = styled.span<NavItemProps>`
+  font-weight: ${(props) => props.active && !props.changeColor && 'bold'};
+  color: ${(props) => props.active && props.changeColor && 'var(--green)'} 
+`;
