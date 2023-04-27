@@ -12,7 +12,7 @@ const Links = [
   },
   {
     label: 'Pessoa Usuária',
-    href: '/pessoa-usuária'
+    href: '/pessoa-usuaria'
   },
   {
     label: 'Profissional',

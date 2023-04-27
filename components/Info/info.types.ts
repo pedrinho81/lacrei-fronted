@@ -1,7 +1,7 @@
 export type InfoProps = {
   title: string,
   message: string,
-  buttons: {
+  buttons?: {
     text: string,
     color: string,
     bg: string,
@@ -12,4 +12,5 @@ export type InfoProps = {
     src: string,
     alt: string
   }
+  borderOnLeft?: boolean;
 }

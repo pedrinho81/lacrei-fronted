@@ -1,19 +1,20 @@
 import Image from "next/image"
 import { InfoProps } from "./info.types"
-import { Container, Button } from "./styles"
+import { Container, Button, Text } from "./styles"
 export const Info: React.FC<InfoProps> = ({
   title,
   message,
   buttons,
   img,
+  borderOnLeft
 }) => {
   return (
     <Container>
       <div>
         <h2>{title}</h2>
-        <p>{message}</p>
+        <Text borderOnLeft={borderOnLeft}>{message}</Text>
         <div className="buttons-container">
-          {buttons.map((button, i) => (
+          {buttons && buttons.map((button, i) => (
             <Button 
             key={i}
             bg={button.bg} 

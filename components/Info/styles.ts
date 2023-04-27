@@ -60,6 +60,13 @@ justify-content: center;
       }
     }
 `;
+type TextProps = {
+  borderOnLeft?: boolean;
+}
+export const Text = styled.p<TextProps>`
+  border-left: ${(props) => props.borderOnLeft ? '5px solid var(--green)' : ''} ;
+  padding-left: ${(props) => props.borderOnLeft ? '1rem' : ''} ;
+`;
 type ButtonProps = {
   color: string,
   bg: string,

@@ -29,7 +29,7 @@ export default function Home() {
         ]} 
         img={{
           alt: 'Ilustração de uma médica.',
-          src: '/imgs/rafiki 2.png'
+          src: '/imgs/rafiki2.png'
         }}/>
 
       </Layout>

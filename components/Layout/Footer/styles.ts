@@ -26,10 +26,12 @@ p {
 
 @media (min-width: 520px) {
   margin: 0.5rem 2rem;
+  gap: 1.4rem;
   nav {
     flex-direction: row;
+    margin-top: 2rem;
     gap: 2.5rem;
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 }
 
