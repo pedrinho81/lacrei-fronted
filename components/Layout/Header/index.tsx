@@ -1,8 +1,5 @@
 import Link from "next/link"
-import crypto from 'crypto';
 import {Container, NavItem} from './styles'
-import { useRouter } from "next/router";
-import styled from "styled-components";
 import { LayoutProps } from "../layout.types";
 
 const Links = [
@@ -26,7 +23,7 @@ const Header: React.FC<LayoutProps> = ({currencyHref}) => {
 
   return (
     <Container>
-      <a>Lacrei</a>
+      <Link href={'/'}>Lacrei</Link>
       <nav>
         {Links.map((link,i ) => (
           <NavItem key={i} changeColor active={currencyHref === link.href}>

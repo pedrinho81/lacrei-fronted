@@ -3,7 +3,6 @@ import Image from "next/image"
 import { Links } from "../Header"
 import { Container } from "./styles"
 import { Icons } from "@/public/icons/icons"
-import crypto from 'crypto'
 import { LayoutProps } from "../layout.types"
 import { NavItem } from "../Header/styles"
 const Footer: React.FC<LayoutProps> = ({ currencyHref }) => {

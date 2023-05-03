@@ -17,13 +17,13 @@ export default function Home() {
             bg: 'var(--green)',
             color: '#fff',
             text: 'Pessoa usuária',
-            href: '',
+            href: '/pessoa-usuaria',
           },
           {
             bg: '#fff',
             color: 'var(--green)',
             text: 'Profissional',
-            href: '',
+            href: '/profissional',
             border: true
           }
         ]} 

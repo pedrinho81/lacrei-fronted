@@ -72,7 +72,7 @@ type ButtonProps = {
   bg: string,
   border?: boolean
 }
-export const Button = styled.a<ButtonProps>`
+export const Button = styled.button<ButtonProps>`
   box-shadow: 0px 4px 4px 0px #00000040;
   text-align: center;
   color: ${(props) => props.color};
