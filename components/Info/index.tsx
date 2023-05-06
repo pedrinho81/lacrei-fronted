@@ -19,7 +19,7 @@ export const Info: React.FC<InfoProps> = ({
         <div className="buttons-container">
           {buttons &&
             buttons.map((button, i) => (
-              <Link href={button.href}>
+              <Link key={i} href={button.href}>
                 <Button
                 onClick={() => router.push(button.href)}
                   key={i}
